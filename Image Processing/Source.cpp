@@ -1,25 +1,23 @@
-#include "opencv2/imgproc/imgproc.hpp"
-#include "opencv2/imgcodecs.hpp"
-#include "opencv2/highgui/highgui.hpp"
-#include <stdlib.h>
-#include <stdio.h>
+#include "opencv2/opencv.hpp"
+#include <iostream>
 
 using namespace cv;
+using namespace std;
 
 int main(int, char** argv)
 {
 	/// Load an image
-	Mat img1 = imread(argv[1]); 
+	Mat img1 = imread(argv[1],CV_LOAD_IMAGE_COLOR); 
 	
 	if (img1.empty())
 	{
 		char ch;
-		scanf("%c", &ch);
+		cin >> ch;
 		return -1;
 	}
 
-	printf("\n%d", img1.cols);
-	printf("\n%d", img1.rows);
+	cout<<"\n"<<img1.cols;
+	cout << "\n" << img1.rows;
 
 	/// show an image
 
