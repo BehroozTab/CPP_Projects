@@ -28,6 +28,9 @@ int main(int, char** argv)
 
 	imshow("Color Image", img_color);
 	imshow("Gray Image", img_gray);
+	
+        
+	imwrite("gray_img.jpg", img_gray);
 
 
 	waitKey(0);
